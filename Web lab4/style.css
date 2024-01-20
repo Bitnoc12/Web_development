@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  background-color: rgba(236, 209, 141, 0.642);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+}
