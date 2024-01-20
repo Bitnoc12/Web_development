@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+    <title>online-test</title>
+  </head>
+  <body onload="startTime()">
+    <header>
+      <center>
+        <h1>2022年度最强大友情测试表单</h1>
+        <p>考试时长:不限 满分:9</p>
+        <div id="txt" class="txt"></div>
+        <script>
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          document.write(Date());
+          document.write("<br />");
+          if (h < 12 && h >= 6) {
+            document.write("Good Morning");
+          }
+
+          if (h >= 12 && h <= 18) {
+            document.write("Good Afternoon");
+          }
+
+          if (h > 18 && h <= 24) {
+            document.write("Good Evening");
+          }
+          if (h > 24 && h < 6) {
+            document.write("Midnight 还不睡");
+          }
+        </script>
+        <!-- <script>
+        var d=new Date();
+        document.write(d);
+      </script> -->
+        <h3>
+          这个表单设计就是为了让大家的友情能够更近一步,跨越今天后的明天迎接的还是太阳,陪伴今天后的明天迎接的还是友情,祝各位好运！
+        </h3>
+      </center>
+    </header>
+    <!-- <p><script type="text/javascript">document.write("MyfirstJavascript!")</script></p> -->
+    <article>
+      <form>
+        <!-- <form id="frmUser" name="frmUser" method="post" onsubmit="return validate(this)";>
+        <fieldset>
+          <legend><strong>Contact Information</strong></legend>
+          <label for="firstName">First name:</label>
+          <input
+            id="firstName"
+            type="text"
+            name="firstName"
+            placeholder="John"
+            size="20"
+            required
+          /><br />
+          <label for="lastName"> Last name:</label>
+          <input
+            id="lastName"
+            type="text"
+            name="lastName"
+            placeholder="Smith"
+            size="20"
+            required
+          /><br />
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="me.@example.com"
+            size="20"
+            required
+          /><br />
+          <label for="select-where">Countries:</label>
+          <select id="select-where" name="select-where" required">
+            <option value="">Please choose one option</option>
+            <option value="china">China</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="singapore">Singapore</option>
+            <option value="others">others</option>
+          </select>
+          
+          <input type="submit" value="submit" /> 
+          
+        </fieldset>
+      </form> -->
+
+        <fieldset>
+          <legend><strong>单选题</strong></legend>
+          <!-- <div id="songs"> -->
+          <label for="song" required>
+            1.以下哪些是周杰伦不是周杰伦的歌曲?</label
+          >
+          <br />
+          <input
+            id="s1"
+            name="song"
+            type="radio"
+            value="qilixiang"
+          />七里香<br />
+          <input
+            id="s2"
+            name="song"
+            type="radio"
+            value="ruguokeyi"
+          />如果可以<br />
+          <input
+            id="s3"
+            name="song"
+            type="radio"
+            value="mingmingjiu"
+          />明明就<br />
+          <input
+            id="s4"
+            name="song"
+            type="radio"
+            value="shuolezaijian"
+          />说了再见
+          <!-- </div> -->
+          <br />
+          <br />
+
+          <label for="n-fruit" required> 2.以下哪些是一粒🥚不喜欢的水果?</label>
+          <br />
+          <input
+            id="nfruit1"
+            name="n-fruit"
+            type="radio"
+            value="草莓"
+          />草莓<br />
+          <input
+            id="nfruit2"
+            name="n-fruit"
+            type="radio"
+            value="奇异果"
+          />奇异果<br />
+          <input
+            id="nfruit3"
+            name="n-fruit"
+            type="radio"
+            value="哈味"
+          />哈味<br />
+          <input
+            id="nfruit4"
+            name="n-fruit"
+            type="radio"
+            value="哈密瓜"
+          />哈密瓜<br />
+          <br />
+          <label for="n-food" required>3.以下哪些是大羊喜欢吃的食物？</label>
+          <br />
+          <input
+            id="nfood1"
+            name="n-food"
+            type="radio"
+            value="薯条"
+          />薯条🍟<br />
+          <input
+            id="nfood2"
+            name="n-food"
+            type="radio"
+            value="芋头糕"
+          />芋头糕<br />
+          <input
+            id="nfood3"
+            name="n-food"
+            type="radio"
+            value="香菜"
+          />香菜<br />
+          <input
+            id="nfood4"
+            name="n-food"
+            type="radio"
+            value="garlic"
+          />Garlic<br />
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>多选题</strong></legend>
+          <label for="n-park" required>1.Jb酒后喜欢去的park有哪些?</label>
+          <br />
+          <input
+            id="npark1"
+            name="n-park"
+            type="checkbox"
+            value="midnight"
+          />Mid-night
+          <input id="npark2" name="n-park" type="checkbox" value="led" />LED
+          <input
+            id="npark3"
+            name="n-park"
+            type="checkbox"
+            value="parkin"
+          />ParkIn
+          <input
+            id="npark4"
+            name="n-park"
+            type="checkbox"
+            value="lanahome"
+          />Lana-Home<br />
+          <br />
+
+          <label for="n-plane" required>2.小龙放过哪几场飞机?</label>
+          <br />
+          <input
+            id="nplane1"
+            name="n-plane"
+            type="checkbox"
+            value="birthday"
+          />Birthday
+          <input
+            id="nplane2"
+            name="n-plane"
+            type="checkbox"
+            value="badminton"
+          />Badminton
+          <input
+            id="nplane3"
+            name="n-plane"
+            type="checkbox"
+            value="competition"
+          />Competition
+          <input
+            id="nplane4"
+            name="n-plane"
+            type="checkbox"
+            value="luna"
+          />Luna<br />
+          <br />
+
+          <label for="n-number" required>3.奇异果来过JB几次</label>
+          <br />
+          <input id="nnumber1" name="n-number" type="checkbox" value="0" />0
+          <input id="nnumber2" name="n-number" type="checkbox" value="1" />1
+          <input id="nnumber3" name="n-number" type="checkbox" value="2" />2
+          <input
+            id="nnumber4"
+            name="n-number"
+            type="checkbox"
+            value="无限大"
+          />无限大<br />
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend><strong>简答题</strong></legend>
+          <label for="j-cat" required>几元家有几只猫？</label>
+          <br />
+          <input
+            id="jcat"
+            name="j-cat"
+            type="text"
+          ></input>
+          <br />
+          <label for="j-anime" required>小荣看到哪个动漫角色会姨母笑？(英文名字,第一个字大写）</label>
+          <br />
+          <input
+            id="janime"
+            name="j-anime"
+            type="text"
+          ></input>
+          <br />
+          <label for="j-dog" required
+            >LukaiW到底养了几只狗?</label
+          >
+          <br />
+          <input
+            id="jdog"
+            name="j-dog"
+            type="text"
+          ></input>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>准备好接受友情的摧残就点下吧！</strong></legend>
+          <input
+            class="btn"
+            type="submit"
+            value="submit"
+            onclick="myFunction()"
+          />
+        </fieldset>
+      </form>
+    </article>
+  </body>
+</html>
